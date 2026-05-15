@@ -1,6 +1,6 @@
 import canoeBeach from "@/assets/canoe-beach.jpg";
 import crewLaunch from "@/assets/crew-launch.jpg";
-import { Heart, Target, Eye, Compass, Users, Waves, TreePine, GraduationCap, Trophy } from "lucide-react";
+import { Heart, Target, Eye, Compass, Users, Waves, TreePine, GraduationCap, Trophy, HandHeart } from "lucide-react";
 
 const coreValues = [
   {
@@ -24,7 +24,7 @@ const clubPillars = [
   {
     icon: Waves,
     title: "Cultural Foundation",
-    description: "Authentic Hawaiian paddling culture is central to our identity. We learn, practice, and perpetuate traditional paddling protocols and customs.",
+    description: "Authentic Hawaiian paddling culture is central to our identity. We learn, practice, and perpetuate traditional protocols by bringing in experienced cultural practitioners and building relationships with partner clubs.",
     bg: "bg-lake-light",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
@@ -52,6 +52,14 @@ const clubPillars = [
     bg: "bg-lake-light",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
+  },
+  {
+    icon: HandHeart,
+    title: "Leadership & Stewardship",
+    description: "Advisory guidance, cultural connection, and paddling development — growth rooted in respect, humility, and cultural integrity, with experienced voices guiding the way.",
+    bg: "bg-pine-light",
+    iconBg: "bg-secondary/10",
+    iconColor: "text-secondary",
   },
 ];
 
