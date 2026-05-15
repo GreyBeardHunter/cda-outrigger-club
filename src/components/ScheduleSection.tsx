@@ -50,7 +50,16 @@ const ScheduleSection = () => {
           ))}
         </div>
 
-        <p className="text-center font-body text-sm text-muted-foreground mt-10">
+        <div className="max-w-3xl mx-auto mt-10 rounded-xl bg-accent/10 border border-accent/30 p-5 text-center">
+          <p className="font-heading font-bold text-base text-foreground mb-1">
+            Your first <span className="text-accent">3 paddles are free</span>
+          </p>
+          <p className="font-body text-sm text-muted-foreground">
+            New paddlers are welcome to join us for three sessions before becoming a member. No experience or equipment needed — just show up.
+          </p>
+        </div>
+
+        <p className="text-center font-body text-sm text-muted-foreground mt-6">
           Schedule may vary. Check our social media for weather cancellations and special events.
         </p>
       </div>
