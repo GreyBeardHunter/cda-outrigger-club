@@ -28,13 +28,18 @@ const ContactSection = () => {
             <p className="font-body text-sm text-muted-foreground">info@cdaoutrigger.com</p>
           </a>
 
-          <div className="bg-card rounded-xl p-6 text-center shadow-card">
-            <div className="w-12 h-12 rounded-full bg-lake-light flex items-center justify-center mx-auto mb-4">
+          <a
+            href="https://www.google.com/maps?q=47.674786,-116.798771"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card rounded-xl p-6 text-center shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 group"
+          >
+            <div className="w-12 h-12 rounded-full bg-lake-light flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
               <MapPin className="w-5 h-5 text-primary" />
             </div>
             <h3 className="font-heading font-semibold text-foreground mb-1">Location</h3>
-            <p className="font-body text-sm text-muted-foreground">Independence Point<br />Coeur d'Alene, Idaho</p>
-          </div>
+            <p className="font-body text-sm text-muted-foreground">NIC Beach<br />Coeur d'Alene, Idaho</p>
+          </a>
 
           <div className="bg-card rounded-xl p-6 text-center shadow-card">
             <div className="w-12 h-12 rounded-full bg-pine-light flex items-center justify-center mx-auto mb-4">
