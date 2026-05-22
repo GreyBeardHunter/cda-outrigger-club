@@ -1,7 +1,7 @@
 import { Clock, MapPin, Calendar } from "lucide-react";
 
 const scheduleData = [
-  { day: "Friday", time: "5:30 PM", type: "Open Paddle", location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts" },
+  { day: "Friday", time: "5:00 PM", type: "Open Paddle", location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts" },
   { day: "Sunday", time: "10:00 AM", type: "Open Paddle", location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts" },
 ];
 
