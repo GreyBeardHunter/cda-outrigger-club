@@ -16,7 +16,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-10">
           <a
             href="mailto:info@cdaoutrigger.com"
             className="bg-card rounded-xl p-6 text-center shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 group"
@@ -28,18 +28,13 @@ const ContactSection = () => {
             <p className="font-body text-sm text-muted-foreground">info@cdaoutrigger.com</p>
           </a>
 
-          <a
-            href="https://www.google.com/maps?q=47.674786,-116.798771"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-card rounded-xl p-6 text-center shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 group"
-          >
-            <div className="w-12 h-12 rounded-full bg-lake-light flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+          <div className="bg-card rounded-xl p-6 text-center shadow-card">
+            <div className="w-12 h-12 rounded-full bg-lake-light flex items-center justify-center mx-auto mb-4">
               <MapPin className="w-5 h-5 text-primary" />
             </div>
             <h3 className="font-heading font-semibold text-foreground mb-1">Location</h3>
             <p className="font-body text-sm text-muted-foreground">NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts<br />Coeur d'Alene, Idaho</p>
-          </a>
+          </div>
 
           <div className="bg-card rounded-xl p-6 text-center shadow-card">
             <div className="w-12 h-12 rounded-full bg-pine-light flex items-center justify-center mx-auto mb-4">
@@ -58,6 +53,20 @@ const ContactSection = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Embedded Map */}
+        <div className="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-card border border-border">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d405.51763029028257!2d-116.7979772192376!3d47.67481824592917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sus!4v1780360343019!5m2!1sen!2sus"
+            width="100%"
+            height="360"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="NIC Beach Meetup Location"
+          />
         </div>
       </div>
     </section>
