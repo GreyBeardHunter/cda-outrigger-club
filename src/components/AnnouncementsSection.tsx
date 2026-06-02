@@ -8,8 +8,6 @@ interface Announcement {
   body: string;
 }
 
-// Update this list each week to keep paddlers in the loop.
-const weekOf = "Week of June 23, 2026";
 
 const announcements: Announcement[] = [
   {
