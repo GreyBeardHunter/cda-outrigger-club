@@ -16,9 +16,9 @@ const announcements: Announcement[] = [
     body: "Open paddle at NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts. Meet at 5:00 PM. All paddlers welcome.",
   },
   {
-    type: "info",
-    title: "Sunday Paddle",
-    body: "Open paddle at NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts. Meet at 10:00 AM. Bring your ʻohana.",
+    type: "cancellation",
+    title: "Sunday Paddle — Canceled",
+    body: "Tomorrow's Sunday paddle is canceled due to weather. Stay safe and we'll see you Friday at 5:00 PM!",
   },
   {
     type: "event",
