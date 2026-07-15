@@ -12,7 +12,7 @@ const ContactSection = () => {
             Drop Us a Line
           </h2>
           <p className="font-body text-muted-foreground text-lg max-w-xl mx-auto">
-            Questions about paddling, membership, or just want to say aloha? We'd love to hear from you.
+            Questions about paddling, or just want to say aloha? We'd love to hear from you.
           </p>
         </div>
 
