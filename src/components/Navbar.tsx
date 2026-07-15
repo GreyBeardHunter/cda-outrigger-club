@@ -7,7 +7,6 @@ const navLinks = [
   { label: "Schedule", href: "#schedule" },
   { label: "Calendar", href: "/calendar" },
   { label: "Events", href: "#events" },
-  { label: "Membership", href: "#join" },
   { label: "Sponsorship", href: "/sponsorship" },
   { label: "Contact", href: "#contact" },
 ];
@@ -46,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="accent" size="sm" asChild>
-            <a href="#join">Paddle With Us</a>
+            <a href="#schedule">Paddle With Us</a>
           </Button>
         </div>
 
@@ -73,7 +72,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="accent" asChild className="mt-2">
-              <a href="#join" onClick={() => setMobileOpen(false)}>Paddle With Us</a>
+              <a href="#schedule" onClick={() => setMobileOpen(false)}>Paddle With Us</a>
             </Button>
           </div>
         </div>

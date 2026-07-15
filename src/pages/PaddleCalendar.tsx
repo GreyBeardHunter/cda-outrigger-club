@@ -110,7 +110,7 @@ const PaddleCalendar = () => {
             Browse our 2026 paddle schedule and RSVP for sessions. Click any highlighted date to see details and sign up.
           </p>
           <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-accent text-accent-foreground font-body font-semibold text-sm px-4 py-2 shadow-elevated">
-            New here? Your first 3 paddles are free.
+            Summer paddles are free and open to all.
           </div>
         </div>
       </div>

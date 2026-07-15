@@ -52,10 +52,10 @@ const ScheduleSection = () => {
 
         <div className="max-w-3xl mx-auto mt-10 rounded-xl bg-accent/10 border border-accent/30 p-5 text-center">
           <p className="font-heading font-bold text-base text-foreground mb-1">
-            Your first <span className="text-accent">3 paddles are free</span>
+            Summer paddles are <span className="text-accent">free and open to all</span>
           </p>
           <p className="font-body text-sm text-muted-foreground">
-            New paddlers are welcome to join us for three sessions before becoming a member. No experience or equipment needed — just show up.
+            No experience or equipment needed — just show up. We love helping newcomers get started.
           </p>
         </div>
 
