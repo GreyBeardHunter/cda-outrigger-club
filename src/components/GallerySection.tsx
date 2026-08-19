@@ -5,19 +5,19 @@ import crewSunset from "@/assets/crew-sunset-shaka.jpg.asset.json";
 const photos = [
   {
     src: crewBeach.url,
-    alt: "CDA Outrigger ʻohana gathered alongside the canoe at the beach on Lake Coeur d'Alene",
-    caption: "Crew launch — Lake Coeur d'Alene",
+    alt: "Guests gathered alongside the outrigger canoe at NIC Beach on Lake Coeur d'Alene",
+    caption: "Launching on Lake Coeur d'Alene",
     className: "md:col-span-2 md:row-span-2",
   },
   {
     src: crewSunset.url,
-    alt: "Paddlers throwing shakas at sunset after a paddle session",
+    alt: "Guests throwing shakas at sunset after an outrigger canoe tour",
     caption: "Shakas at sunset",
     className: "",
   },
   {
     src: crewDusk.url,
-    alt: "Crew with paddles in hand at dusk by the canoes",
+    alt: "Tour guests with paddles in hand at dusk beside the canoes",
     caption: "Paddles up at dusk",
     className: "",
   },
@@ -29,13 +29,13 @@ const GallerySection = () => {
       <div className="container px-4">
         <div className="text-center mb-12 max-w-2xl mx-auto">
           <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-            ʻOhana
+            On the Water
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4 leading-tight">
-            Our <span className="text-primary">Crew</span> on the Water
+            Moments from Our <span className="text-primary">Tours</span>
           </h2>
           <p className="font-body text-muted-foreground text-lg leading-relaxed">
-            Friends, family, and first-timers — moments from the beach and the lake.
+            Friends, families, and first-timers — real guests, real golden hours.
           </p>
         </div>
 

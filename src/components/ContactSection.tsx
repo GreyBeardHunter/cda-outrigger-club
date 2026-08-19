@@ -9,30 +9,30 @@ const ContactSection = () => {
             Get In Touch
           </p>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Drop Us a Line
+            Talk to Our Crew
           </h2>
           <p className="font-body text-muted-foreground text-lg max-w-xl mx-auto">
-            Questions about paddling, or just want to say aloha? We'd love to hear from you.
+            Questions about a tour, private charter, or gift certificate? We'd love to hear from you.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-10">
           <a
-            href="mailto:info@cdaoutrigger.com"
+            href="mailto:aloha@cdaoutrigger.com"
             className="bg-card rounded-xl p-6 text-center shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 group"
           >
             <div className="w-12 h-12 rounded-full bg-koa-light flex items-center justify-center mx-auto mb-4 group-hover:bg-accent/20 transition-colors">
               <Mail className="w-5 h-5 text-accent" />
             </div>
             <h3 className="font-heading font-semibold text-foreground mb-1">Email</h3>
-            <p className="font-body text-sm text-muted-foreground">info@cdaoutrigger.com</p>
+            <p className="font-body text-sm text-muted-foreground">aloha@cdaoutrigger.com</p>
           </a>
 
           <div className="bg-card rounded-xl p-6 text-center shadow-card">
             <div className="w-12 h-12 rounded-full bg-lake-light flex items-center justify-center mx-auto mb-4">
               <MapPin className="w-5 h-5 text-primary" />
             </div>
-            <h3 className="font-heading font-semibold text-foreground mb-1">Location</h3>
+            <h3 className="font-heading font-semibold text-foreground mb-1">Departure Point</h3>
             <p className="font-body text-sm text-muted-foreground">NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts<br />Coeur d'Alene, Idaho</p>
           </div>
 
@@ -65,7 +65,7 @@ const ContactSection = () => {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="NIC Beach Meetup Location"
+            title="NIC Beach tour departure point"
           />
         </div>
       </div>
