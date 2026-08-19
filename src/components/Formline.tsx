@@ -91,7 +91,7 @@ const Paddler = ({ x, lean = 10 }: { x: number; lean?: number }) => {
 /** Large hero mark: an abstract OC6 crew rendered in solid formline shapes —
  *  filled hull, U-form paddlers, ovoid heads with cedar-red fields. */
 export const FormlineCanoeMark = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 560 340" aria-hidden="true" className={className}>
+  <svg viewBox="0 0 560 396" aria-hidden="true" className={className}>
     <g fill="currentColor">
       {/* sun — primary ovoid with red inner field */}
       <path d="M280 18 C 326 18, 350 38, 350 66 C 350 96, 320 116, 280 116 C 240 116, 210 96, 210 66 C 210 38, 234 18, 280 18 Z" />
@@ -126,8 +126,8 @@ export const FormlineCanoeMark = ({ className = "" }: { className?: string }) =>
 
       {/* water — swelling wake forms under the blades */}
       <g fill="none" stroke="currentColor" strokeLinecap="round" opacity="0.6">
-        <path d="M110 322 C 160 336, 250 340, 322 330" strokeWidth="4" />
-        <path d="M170 336 C 236 348, 330 348, 402 334" strokeWidth="2" opacity="0.7" />
+        <path d="M70 352 C 140 368, 260 372, 352 360" strokeWidth="4" />
+        <path d="M140 374 C 226 386, 340 386, 428 370" strokeWidth="2" opacity="0.7" />
       </g>
     </g>
   </svg>
