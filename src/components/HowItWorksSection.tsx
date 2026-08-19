@@ -1,4 +1,5 @@
 import { LifeBuoy, GraduationCap, Ship, Sparkles } from "lucide-react";
+import { Ovoid, FormlineWaves } from "@/components/Formline";
 
 const steps = [
   {
@@ -33,8 +34,9 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-20 md:py-28 bg-lake-light">
-      <div className="container px-4">
+    <section id="how-it-works" className="relative py-20 md:py-28 bg-lake-light overflow-hidden">
+      <FormlineWaves className="pointer-events-none absolute inset-x-0 bottom-0 w-[120%] h-40 text-primary/15" />
+      <div className="container px-4 relative z-10">
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
             How It Works
@@ -49,10 +51,11 @@ const HowItWorksSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {steps.map((s) => (
-            <div key={s.step} className="bg-card rounded-2xl p-7 shadow-card">
+            <div key={s.step} className="ink-frame shadow-card p-7">
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <s.icon className="w-6 h-6 text-primary" />
+                <div className="relative w-16 h-14 flex items-center justify-center">
+                  <Ovoid className="absolute inset-0 w-16 h-14 text-primary" />
+                  <s.icon className="relative w-5 h-5 text-primary" strokeWidth={1.5} />
                 </div>
                 <span className="font-heading font-bold text-2xl text-accent/30">{s.step}</span>
               </div>

@@ -43,7 +43,7 @@ const GallerySection = () => {
           {photos.map((photo) => (
             <figure
               key={photo.src}
-              className={`relative group rounded-2xl overflow-hidden shadow-card ${photo.className}`}
+              className={`relative group ink-frame overflow-hidden shadow-card ${photo.className}`}
             >
               <img
                 src={photo.src}

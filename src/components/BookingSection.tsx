@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Users, ShieldCheck } from "lucide-react";
+import { FormlineBand } from "@/components/Formline";
 
 const timeSlots = [
   { label: "Brunch Paddle", time: "8:30 AM daily", note: "1 hour" },
@@ -10,7 +11,7 @@ const timeSlots = [
 
 const BookingSection = () => {
   return (
-    <section id="book" className="py-20 md:py-28 bg-background">
+    <section id="book" className="py-20 md:py-28 bg-background kapa-texture">
       <div className="container px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-center">
           <div>
@@ -41,19 +42,22 @@ const BookingSection = () => {
               <Button variant="accent" size="lg" asChild>
                 <a href="mailto:aloha@cdaoutrigger.com?subject=Booking%20Request">Request a Booking</a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild className="border-2 border-foreground">
                 <a href="#contact">Ask a Question</a>
               </Button>
             </div>
           </div>
 
-          <div className="bg-lake-light rounded-2xl p-8 shadow-card">
-            <h3 className="font-heading font-bold text-xl text-foreground mb-6">Daily Departures</h3>
+          <div className="bg-lake-light ink-frame shadow-elevated p-8">
+            <h3 className="font-heading font-bold text-xl text-foreground mb-4">Daily Departures</h3>
+            <div className="text-primary/60 mb-6">
+              <FormlineBand />
+            </div>
             <div className="space-y-4">
               {timeSlots.map((slot) => (
                 <div
                   key={slot.label}
-                  className="bg-card rounded-xl p-4 flex items-center justify-between gap-4"
+                  className="bg-card border border-foreground/50 p-4 flex items-center justify-between gap-4"
                 >
                   <div>
                     <p className="font-heading font-semibold text-foreground">{slot.label}</p>
@@ -61,7 +65,7 @@ const BookingSection = () => {
                       <Clock className="w-3 h-3" /> {slot.time}
                     </p>
                   </div>
-                  <span className="font-body text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-pine-light text-secondary whitespace-nowrap">
+                  <span className="font-body text-xs font-semibold tracking-[0.15em] uppercase px-3 py-1 border border-secondary/60 bg-pine-light text-secondary whitespace-nowrap">
                     {slot.note}
                   </span>
                 </div>
