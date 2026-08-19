@@ -20,7 +20,7 @@ const HeroSection = () => {
               Guided OC6 Outrigger Tours · Lake Coeur d'Alene
             </p>
 
-            <FormlineCanoeMark className="mx-auto w-full max-w-md text-primary draw-in mb-6" />
+            <FormlineCanoeMark className="mx-auto w-full max-w-md text-foreground animate-fade-slide-up mb-6" />
 
             <h1 className="font-heading font-semibold text-4xl sm:text-5xl md:text-6xl text-foreground leading-[1.05] text-balance mb-6">
               <span className="text-accent">Aloha</span> &amp; Welcome

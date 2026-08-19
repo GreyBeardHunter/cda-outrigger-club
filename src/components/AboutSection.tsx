@@ -1,6 +1,6 @@
 import crewLaunch from "@/assets/crew-launch.jpg";
 import { Heart, Users, Compass, Waves, Anchor, Camera } from "lucide-react";
-import { Ovoid, FormlineBand } from "@/components/Formline";
+import { Ovoid, FormlineBand, FormlineSalmon } from "@/components/Formline";
 
 const values = [
   {
@@ -92,6 +92,7 @@ const AboutSection = () => {
         </div>
 
         <div className="mb-20 md:mb-28">
+          <FormlineSalmon className="mx-auto w-full max-w-xl text-foreground mb-8" />
           <div className="text-primary/60 max-w-xs mx-auto mb-10">
             <FormlineBand />
           </div>
