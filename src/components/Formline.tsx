@@ -160,7 +160,7 @@ export const FormlineSalmon = ({ className = "" }: { className?: string }) => {
 
         {/* ---------- secondary: cedar-red inner forms ---------- */}
         {/* red joint field — a formline box, rounded on every corner, inset in the ink */}
-        <path d="M388 164 C 448 164, 476 188, 476 226 C 476 266, 446 290, 388 290 C 332 290, 304 266, 304 226 C 304 188, 334 164, 388 164 Z" fill={red} />
+        <path d="M388 168 C 442 168, 468 190, 468 224 C 468 260, 440 282, 388 282 C 338 282, 312 260, 312 224 C 312 190, 340 168, 388 168 Z" fill={red} />
         {/* white ovoid inside the red field — thick above, thin below */}
         <path d="M390 188 C 438 188, 460 202, 460 228 C 460 254, 436 268, 390 268 C 346 268, 322 254, 322 228 C 322 202, 346 188, 390 188 Z" fill={card} />
         {/* red inner ovoid, closing the nest */}
@@ -168,8 +168,8 @@ export const FormlineSalmon = ({ className = "" }: { className?: string }) => {
         <path d="M386 216 C 410 216, 422 221, 422 230 C 422 241, 408 245, 386 245 C 366 245, 354 241, 354 230 C 354 221, 366 216, 386 216 Z" fill={card} />
         <path d="M384 224 C 398 224, 406 226, 406 231 C 406 237, 397 239, 384 239 C 372 239, 364 237, 364 231 C 364 226, 372 224, 384 224 Z" fill={red} />
 
-        {/* small red split-U at the peduncle */}
-        <path d="M486 202 C 504 212, 514 228, 516 248 C 509 249, 503 251, 497 253 C 494 236, 488 220, 478 208 Z" fill={red} />
+        {/* small red split-U at the peduncle, tucked inside the ink */}
+        <path d="M486 214 C 498 224, 505 238, 506 254 C 500 255, 495 257, 490 258 C 488 244, 484 232, 477 221 Z" fill={red} />
 
         {/* hairline relief — the diminishing end of every line */}
         <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.85">
