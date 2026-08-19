@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock, Users, Waves, UtensilsCrossed, Wine, Sun, Check } from "lucide-react";
+import { FormlineBand, Ovoid } from "@/components/Formline";
 
 const experiences = [
   {
@@ -58,8 +59,11 @@ const experiences = [
 
 const ExperiencesSection = () => {
   return (
-    <section id="experiences" className="py-20 md:py-28 bg-background">
+    <section id="experiences" className="py-20 md:py-28 bg-background kapa-texture">
       <div className="container px-4">
+        <div className="text-primary/60 max-w-xs mx-auto mb-10">
+          <FormlineBand />
+        </div>
         <div className="text-center mb-14 max-w-2xl mx-auto">
           <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
             Our Experiences
@@ -75,12 +79,13 @@ const ExperiencesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {experiences.map((exp) => (
-            <div key={exp.name} className={`${exp.bg} rounded-2xl p-8 flex flex-col`}>
+            <div key={exp.name} className={`${exp.bg} ink-frame shadow-card p-8 flex flex-col transition-shadow duration-300 hover:shadow-elevated`}>
               <div className="flex items-start justify-between gap-4 mb-5">
-                <div className={`w-12 h-12 rounded-xl ${exp.iconBg} flex items-center justify-center`}>
-                  <exp.icon className={`w-6 h-6 ${exp.iconColor}`} />
+                <div className="relative w-16 h-14 flex items-center justify-center">
+                  <Ovoid className={`absolute inset-0 w-16 h-14 ${exp.iconColor}`} />
+                  <exp.icon className={`relative w-5 h-5 ${exp.iconColor}`} strokeWidth={1.5} />
                 </div>
-                <span className="font-body text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full bg-card text-muted-foreground">
+                <span className="font-body text-xs font-semibold tracking-[0.15em] uppercase px-3 py-1 border border-foreground/60 bg-card text-muted-foreground">
                   {exp.tag}
                 </span>
               </div>
@@ -112,7 +117,7 @@ const ExperiencesSection = () => {
           ))}
         </div>
 
-        <div className="max-w-5xl mx-auto mt-8 rounded-xl bg-card border border-border p-5 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left shadow-card">
+        <div className="max-w-5xl mx-auto mt-8 ink-frame p-5 flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left shadow-card">
           <Users className="w-6 h-6 text-accent flex-shrink-0" />
           <p className="font-body text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">Private charters & groups:</span> our canoes seat six, and

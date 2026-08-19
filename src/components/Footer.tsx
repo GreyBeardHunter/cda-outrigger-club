@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube, Heart } from "lucide-react";
+import { FormlineBand } from "@/components/Formline";
 
 const StravaIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -8,7 +9,10 @@ const StravaIcon = () => (
 
 const Footer = () => {
   return (
-    <footer className="bg-primary py-12">
+    <footer className="bg-primary py-12 border-t-2 border-foreground">
+      <div className="container px-4 text-primary-foreground/40 mb-10">
+        <FormlineBand />
+      </div>
       <div className="container px-4">
         <div className="grid md:grid-cols-3 gap-8 items-start mb-8">
           <div>
@@ -31,16 +35,16 @@ const Footer = () => {
           <div>
             <p className="font-heading font-semibold text-sm text-primary-foreground/80 mb-3">Follow Us</p>
             <div className="flex gap-3">
-              <a href="https://www.instagram.com/cda_outrigger_canoe_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.instagram.com/cda_outrigger_canoe_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 border border-primary-foreground/25 bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61579139774315" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.facebook.com/profile.php?id=61579139774315" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 border border-primary-foreground/25 bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://www.youtube.com/@CDAOutrigger" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.youtube.com/@CDAOutrigger" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="w-10 h-10 border border-primary-foreground/25 bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="https://www.strava.com/clubs/cdaoutriggercanoe" target="_blank" rel="noopener noreferrer" aria-label="Strava" className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
+              <a href="https://www.strava.com/clubs/cdaoutriggercanoe" target="_blank" rel="noopener noreferrer" aria-label="Strava" className="w-10 h-10 border border-primary-foreground/25 bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:text-accent hover:bg-primary-foreground/20 transition-all">
                 <StravaIcon />
               </a>
             </div>

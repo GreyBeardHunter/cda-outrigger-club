@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Rubik", "system-ui", "sans-serif"],
+        heading: ["Fraunces", "Georgia", "serif"],
         body: ["Work Sans", "system-ui", "sans-serif"],
       },
       colors: {

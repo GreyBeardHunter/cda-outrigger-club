@@ -1,5 +1,6 @@
 import crewLaunch from "@/assets/crew-launch.jpg";
 import { Heart, Users, Compass, Waves, Anchor, Camera } from "lucide-react";
+import { Ovoid, FormlineBand } from "@/components/Formline";
 
 const values = [
   {
@@ -55,16 +56,16 @@ const AboutSection = () => {
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20 md:mb-28">
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-elevated">
+            <div className="ink-frame overflow-hidden shadow-elevated p-2">
               <img
                 src={crewLaunch}
                 alt="Guests launching a six-person outrigger canoe on Lake Coeur d'Alene"
-                className="w-full h-[400px] md:h-[500px] object-cover"
+                className="w-full h-[400px] md:h-[500px] object-cover grayscale-[0.35] contrast-[1.05]"
                 loading="lazy"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-accent/10 -z-10" />
-            <div className="absolute -top-4 -left-4 w-32 h-32 rounded-xl bg-lake-light -z-10" />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-accent/40 -z-10" />
+            <div className="absolute -top-4 -left-4 w-32 h-32 border-2 border-primary/30 -z-10" />
           </div>
 
           <div>
@@ -83,7 +84,7 @@ const AboutSection = () => {
               Our guides are certified, lake-savvy, and genuinely happy to be out there. You bring your crew; we bring
               the canoe, the coaching, the safety gear, and the food and drinks that turn a paddle into an occasion.
             </p>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pine-light">
+            <div className="inline-flex items-center gap-2 px-4 py-2 border border-secondary/50 bg-pine-light">
               <Heart className="w-4 h-4 text-secondary" />
               <span className="font-body text-sm font-medium text-secondary">Locally owned · Guided & insured</span>
             </div>
@@ -91,6 +92,9 @@ const AboutSection = () => {
         </div>
 
         <div className="mb-20 md:mb-28">
+          <div className="text-primary/60 max-w-xs mx-auto mb-10">
+            <FormlineBand />
+          </div>
           <div className="text-center mb-12">
             <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
               Our Values
@@ -102,8 +106,9 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {values.map((value) => (
               <div key={value.title} className="text-center px-4">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                  <value.icon className="w-8 h-8 text-primary" />
+                <div className="relative w-24 h-20 mx-auto mb-5 flex items-center justify-center">
+                  <Ovoid className="absolute inset-0 w-24 h-20 text-primary" />
+                  <value.icon className="relative w-7 h-7 text-primary" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-heading font-bold text-xl text-foreground mb-3">{value.title}</h3>
                 <p className="font-body text-muted-foreground leading-relaxed">{value.description}</p>
@@ -114,9 +119,10 @@ const AboutSection = () => {
 
         <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {highlights.map((item) => (
-            <div key={item.title} className={`${item.bg} rounded-2xl p-8`}>
-              <div className={`w-12 h-12 rounded-xl ${item.iconBg} flex items-center justify-center mb-5`}>
-                <item.icon className={`w-6 h-6 ${item.iconColor}`} />
+            <div key={item.title} className={`${item.bg} ink-frame shadow-card p-8`}>
+              <div className="relative w-16 h-14 mb-5 flex items-center justify-center">
+                <Ovoid className={`absolute inset-0 w-16 h-14 ${item.iconColor}`} />
+                <item.icon className={`relative w-5 h-5 ${item.iconColor}`} strokeWidth={1.5} />
               </div>
               <h3 className="font-heading font-bold text-lg text-foreground mb-3">{item.title}</h3>
               <p className="font-body text-muted-foreground leading-relaxed text-sm">{item.description}</p>
