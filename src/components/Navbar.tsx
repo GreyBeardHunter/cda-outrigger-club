@@ -23,11 +23,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-card/95 backdrop-blur-md shadow-card" : "bg-transparent"
+        scrolled ? "bg-card/95 backdrop-blur-md border-b-2 border-foreground" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className={`font-heading font-bold text-xl md:text-2xl tracking-tight transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
+        <a href="#" className="font-heading font-bold text-xl md:text-2xl tracking-tight text-foreground">
           CDA Outrigger
         </a>
 
@@ -36,9 +36,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className={`font-body font-medium text-sm tracking-wide transition-colors duration-300 hover:text-accent ${
-                scrolled ? "text-foreground" : "text-primary-foreground/90"
-              }`}
+              className="font-body font-medium text-sm tracking-wide transition-colors duration-300 hover:text-accent text-foreground"
             >
               {link.label}
             </a>
@@ -50,7 +48,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
+          className={"md:hidden p-2 transition-colors text-foreground"}
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
