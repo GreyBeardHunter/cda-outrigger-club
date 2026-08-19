@@ -5,9 +5,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-background kapa-texture pt-24 pb-16">
       {/* Ambient formline water */}
-      <FormlineWaves className="pointer-events-none absolute -bottom-4 left-0 w-[130%] h-64 text-primary/20 animate-drift" />
-      <FormlineCorner className="pointer-events-none absolute top-24 left-6 w-24 h-24 text-accent/30 hidden md:block" />
-      <FormlineCorner className="pointer-events-none absolute bottom-16 right-6 w-24 h-24 text-accent/30 rotate-180 hidden md:block" />
+      <FormlineWaves className="pointer-events-none absolute -bottom-4 left-0 w-[130%] h-64 text-primary/30 animate-drift" />
+      <FormlineCorner className="pointer-events-none absolute top-24 left-6 w-28 h-28 text-accent/50 hidden md:block" />
+      <FormlineCorner className="pointer-events-none absolute bottom-16 right-6 w-28 h-28 text-accent/50 rotate-180 hidden md:block" />
 
       <div className="relative z-10 container px-4">
         <div className="mx-auto max-w-4xl ink-frame shadow-elevated">
