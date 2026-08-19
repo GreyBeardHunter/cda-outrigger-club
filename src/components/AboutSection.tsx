@@ -1,6 +1,7 @@
 import crewLaunch from "@/assets/crew-launch.jpg";
 import { Heart, Users, Compass, Waves, Anchor, Camera } from "lucide-react";
-import { Ovoid, FormlineBand, FormlineSalmon } from "@/components/Formline";
+import { Ovoid, FormlineBand } from "@/components/Formline";
+import paddleWatercolor from "@/assets/paddle-watercolor.jpg";
 
 const values = [
   {
@@ -92,7 +93,16 @@ const AboutSection = () => {
         </div>
 
         <div className="mb-20 md:mb-28">
-          <FormlineSalmon className="mx-auto w-full max-w-xl text-foreground mb-8" />
+          <div className="ink-frame shadow-elevated overflow-hidden max-w-3xl mx-auto mb-8">
+            <img
+              src={paddleWatercolor}
+              alt="Watercolor painting of a koa paddle blade entering turquoise water beside an outrigger canoe"
+              className="w-full h-[260px] md:h-[340px] object-cover"
+              loading="lazy"
+              width={1200}
+              height={912}
+            />
+          </div>
           <div className="text-primary/60 max-w-xs mx-auto mb-10">
             <FormlineBand />
           </div>
