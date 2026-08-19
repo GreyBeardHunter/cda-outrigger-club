@@ -61,7 +61,7 @@ const AboutSection = () => {
               <img
                 src={crewLaunch}
                 alt="Guests launching a six-person outrigger canoe on Lake Coeur d'Alene"
-                className="w-full h-[400px] md:h-[500px] object-cover grayscale-[0.35] contrast-[1.05]"
+                className="w-full h-[400px] md:h-[500px] object-cover"
                 loading="lazy"
               />
             </div>
