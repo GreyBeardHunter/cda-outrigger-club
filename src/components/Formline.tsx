@@ -53,26 +53,40 @@ export const Ovoid = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-/** A single paddler rendered as a filled formline U-form with an ovoid head
- *  and a tapered S-form paddle. */
-const Paddler = ({ x, flip = false }: { x: number; flip?: boolean }) => (
-  <g transform={`translate(${x} 0)`}>
-    {/* head — solid ovoid with negative inner ovoid and red eye field */}
-    <path d="M0 128 C 21 128, 30 139, 30 150 C 30 163, 18 172, 0 172 C -18 172, -30 163, -30 150 C -30 139, -21 128, 0 128 Z" />
-    <path d="M0 138 C 14 138, 20 144, 20 151 C 20 159, 12 164, 0 164 C -12 164, -20 159, -20 151 C -20 144, -14 138, 0 138 Z" fill="hsl(var(--card))" />
-    <ellipse cx="0" cy="151" rx="9" ry="7" fill="hsl(var(--accent))" />
-    {/* torso — U-form, thick outside, tapering inward */}
-    <path d="M-30 176 C -30 224, 30 224, 30 176 C 30 212, 18 220, 0 220 C -18 220, -30 212, -30 176 Z" />
-    {/* paddle — tapered S-form */}
-    <path
-      d={
-        flip
-          ? "M28 168 C 46 186, 58 208, 62 232 C 54 234, 48 236, 44 240 C 42 214, 34 190, 20 174 Z"
-          : "M-28 168 C -46 186, -58 208, -62 232 C -54 234, -48 236, -44 240 C -42 214, -34 190, -20 174 Z"
-      }
-    />
-  </g>
-);
+/** A single paddler mid-stroke: forward-leaning body, driving shoulder,
+ *  tapered shaft and blade biting the water. Built from filled formline
+ *  shapes — ovoid head, S-form torso, split-U arm, leaf blade. */
+const Paddler = ({ x, lean = 10 }: { x: number; lean?: number }) => {
+  const card = "hsl(var(--card))";
+  const red = "hsl(var(--accent))";
+  return (
+    <g transform={`translate(${x} 0) rotate(${-lean} 0 220)`}>
+      {/* paddle — tapered shaft driving down and forward into the water */}
+      <path d="M4 150 C -12 178, -32 208, -52 236 C -46 241, -41 245, -37 250 C -20 220, -1 190, 16 160 Z" />
+      {/* blade — leaf form, wide where it bites, tapering to the throat */}
+      <path d="M-52 234 C -70 248, -80 268, -80 290 C -60 288, -44 274, -34 252 C -40 246, -46 240, -52 234 Z" />
+      <path d="M-52 250 C -62 260, -68 272, -69 284 C -57 280, -47 270, -41 256 Z" fill={card} />
+
+      {/* head — ovoid pitched forward over the catch */}
+      <g transform="rotate(-14 0 148)">
+        <path d="M0 126 C 21 126, 30 137, 30 149 C 30 162, 18 171, 0 171 C -18 171, -30 162, -30 149 C -30 137, -21 126, 0 126 Z" />
+        <path d="M-2 136 C 12 136, 19 142, 19 150 C 19 158, 11 163, -2 163 C -14 163, -21 158, -21 150 C -21 142, -14 136, -2 136 Z" fill={card} />
+        <ellipse cx="-4" cy="150" rx="9" ry="7" fill={red} />
+      </g>
+
+      {/* torso — S-form mass: heavy at the hip, swelling into the driving shoulder */}
+      <path d="M-28 168 C -38 190, -38 214, -26 232 C -4 242, 20 238, 32 224 C 22 208, 16 188, 14 166 C 2 174, -16 175, -28 168 Z" />
+      {/* negative relief inside the torso — the coiled U of the stroke */}
+      <path d="M-16 188 C -22 204, -19 220, -6 228 C 6 226, 12 216, 10 200 C 0 200, -9 196, -16 188 Z" fill={card} />
+      <path d="M-8 202 C -12 212, -9 220, -1 223 C 5 221, 7 214, 5 206 C 0 206, -4 205, -8 202 Z" fill={red} />
+
+      {/* leading arm — tapered form reaching down the shaft to the catch */}
+      <path d="M-26 176 C -34 192, -42 206, -52 218 C -46 223, -41 227, -37 232 C -28 218, -20 202, -14 186 Z" />
+      {/* top hand — swelling to diminishing over the grip */}
+      <path d="M8 158 C 16 162, 20 170, 18 180 C 10 178, 4 172, 2 164 Z" />
+    </g>
+  );
+};
 
 /** Large hero mark: an abstract OC6 crew rendered in solid formline shapes —
  *  filled hull, U-form paddlers, ovoid heads with cedar-red fields. */
@@ -85,22 +99,36 @@ export const FormlineCanoeMark = ({ className = "" }: { className?: string }) =>
       <path d="M280 46 C 304 46, 318 55, 318 67 C 318 81, 302 89, 280 89 C 258 89, 242 81, 242 67 C 242 55, 256 46, 280 46 Z" fill="hsl(var(--accent))" />
       <path d="M280 56 C 294 56, 302 61, 302 68 C 302 76, 292 80, 280 80 C 268 80, 258 76, 258 68 C 258 61, 266 56, 280 56 Z" fill="hsl(var(--card))" />
 
-      {/* crew */}
-      <Paddler x={145} />
-      <Paddler x={240} />
-      <Paddler x={335} />
-      <Paddler x={430} />
+      {/* wind — tapering motion lines driving across the crew */}
+      <g fill="none" stroke="currentColor" strokeLinecap="round" opacity="0.55">
+        <path d="M74 120 C 116 104, 158 100, 196 106" strokeWidth="4" />
+        <path d="M52 148 C 96 130, 142 126, 182 132" strokeWidth="2.5" opacity="0.75" />
+        <path d="M392 108 C 434 96, 476 96, 512 104" strokeWidth="3" />
+        <path d="M404 136 C 444 124, 484 124, 518 132" strokeWidth="1.75" opacity="0.75" />
+      </g>
 
       {/* hull — tapered crescent, heavy at center, knife points at the ends */}
       <path d="M28 218 C 130 268, 430 268, 532 214 C 520 244, 470 268, 400 282 C 320 298, 220 296, 150 278 C 84 262, 40 240, 28 218 Z" />
       {/* hull inner relief line */}
       <path d="M96 246 C 200 282, 372 282, 466 248 C 380 272, 190 274, 96 246 Z" fill="hsl(var(--card))" />
 
+      {/* crew — drawn over the hull so the blades reach the water */}
+      <Paddler x={150} lean={12} />
+      <Paddler x={244} lean={9} />
+      <Paddler x={338} lean={12} />
+      <Paddler x={432} lean={9} />
+
       {/* iako (booms) */}
       <path d="M186 258 C 168 284, 146 296, 118 302 L 112 288 C 138 282, 156 272, 172 250 Z" />
       <path d="M316 268 C 300 292, 278 302, 250 306 L 246 292 C 270 288, 288 278, 302 260 Z" />
       {/* ama (float) — tapered formline sliver */}
       <path d="M84 296 C 150 316, 236 316, 292 296 C 234 308, 148 308, 84 296 Z" />
+
+      {/* water — swelling wake forms under the blades */}
+      <g fill="none" stroke="currentColor" strokeLinecap="round" opacity="0.6">
+        <path d="M110 322 C 160 336, 250 340, 322 330" strokeWidth="4" />
+        <path d="M170 336 C 236 348, 330 348, 402 334" strokeWidth="2" opacity="0.7" />
+      </g>
     </g>
   </svg>
 );
