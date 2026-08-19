@@ -105,37 +105,84 @@ export const FormlineCanoeMark = ({ className = "" }: { className?: string }) =>
   </svg>
 );
 
-/** Abstract formline salmon — the lake's kupuna. Solid ink body with negative
- *  space relief and cedar-red inner ovoids. */
-export const FormlineSalmon = ({ className = "" }: { className?: string }) => (
-  <svg viewBox="0 0 640 320" aria-hidden="true" className={className}>
-    <g fill="currentColor">
-      {/* body */}
-      <path d="M40 190 C 70 118, 170 74, 288 82 C 372 88, 436 116, 470 152 C 500 128, 540 116, 584 116 C 552 140, 536 164, 534 190 C 536 216, 552 240, 584 264 C 540 264, 500 252, 470 228 C 436 264, 372 292, 288 298 C 170 306, 70 262, 40 190 Z" />
-      {/* negative belly sweep */}
-      <path d="M92 214 C 128 262, 216 284, 300 278 C 232 266, 154 246, 92 214 Z" fill="hsl(var(--card))" />
-      {/* head negative field + eye ovoid */}
-      <path d="M110 132 C 146 124, 176 122, 200 124 C 168 140, 140 152, 116 168 C 106 156, 104 143, 110 132 Z" fill="hsl(var(--card))" />
-      <path d="M128 154 C 152 154, 166 164, 166 178 C 166 194, 148 202, 126 202 C 104 202, 90 192, 90 178 C 90 164, 106 154, 128 154 Z" fill="hsl(var(--card))" />
-      <path d="M92 226 C 130 240, 176 248, 216 248 C 172 258, 122 252, 88 238 Z" fill="hsl(var(--card))" />
-      <ellipse cx="128" cy="176" rx="16" ry="12" />
-      <ellipse cx="128" cy="176" rx="6" ry="5" fill="hsl(var(--card))" />
-      {/* gill U-forms */}
-      <path d="M212 128 C 212 196, 212 232, 236 264 C 224 220, 226 172, 240 130 Z" fill="hsl(var(--card))" />
-      <path d="M256 126 C 254 172, 254 220, 268 266 C 268 218, 270 170, 282 128 Z" fill="hsl(var(--card))" />
-      {/* red inner ovoid — the joint mark */}
-      <path d="M368 126 C 414 126, 438 146, 438 176 C 438 208, 410 230, 368 230 C 326 230, 300 208, 300 176 C 300 146, 322 126, 368 126 Z" fill="hsl(var(--accent))" />
-      <path d="M368 144 C 400 144, 418 158, 418 177 C 418 198, 396 212, 368 212 C 340 212, 320 198, 320 177 C 320 158, 336 144, 368 144 Z" fill="hsl(var(--card))" />
-      <path d="M356 158 C 380 158, 392 166, 392 178 C 392 192, 378 199, 356 199 C 340 199, 330 192, 330 178 C 330 166, 340 158, 356 158 Z" fill="hsl(var(--accent))" />
-      {/* dorsal fin relief */}
-      <path d="M258 92 C 296 62, 330 50, 358 48 C 330 68, 306 84, 292 100 C 280 96, 268 94, 258 92 Z" />
-      <path d="M288 80 C 310 66, 328 58, 342 56 C 322 70, 306 82, 296 92 Z" fill="hsl(var(--card))" />
-      {/* tail negative splits */}
-      <path d="M556 140 C 542 156, 536 172, 534 188 C 542 168, 550 154, 566 138 Z" fill="hsl(var(--card))" />
-      <path d="M556 240 C 542 224, 536 208, 534 192 C 542 212, 550 226, 566 242 Z" fill="hsl(var(--card))" />
-    </g>
-  </svg>
-);
+/** Formline salmon — life, perseverance, regeneration.
+ *  Built the traditional way: a continuous primary formline that swells and
+ *  diminishes, negative-space relief carved out of the black mass, ovoid eye,
+ *  split-U scale rows, split-U fins, and secondary cedar-red inner forms. */
+export const FormlineSalmon = ({ className = "" }: { className?: string }) => {
+  const card = "hsl(var(--card))";
+  const red = "hsl(var(--accent))";
+  return (
+    <svg viewBox="0 0 740 420" aria-hidden="true" className={className}>
+      <g fill="currentColor">
+        {/* ---------- primary formline: arched body ---------- */}
+        <path d="M26 288 C 44 196, 148 128, 276 124 C 388 121, 466 158, 514 218 C 526 234, 532 252, 530 272 C 462 284, 396 310, 322 326 C 220 348, 100 338, 40 314 C 18 305, 18 300, 26 288 Z" />
+
+        {/* tail: two swelling lobes off the peduncle */}
+        <path d="M504 214 C 550 180, 610 156, 680 148 C 646 186, 626 214, 620 242 C 656 252, 690 274, 718 308 C 652 304, 594 288, 550 266 C 524 253, 508 233, 500 216 Z" />
+        <path d="M566 196 C 604 176, 640 164, 664 158 C 636 190, 618 216, 610 240 C 592 226, 576 211, 566 196 Z" fill={card} />
+        <path d="M596 262 C 634 278, 664 296, 686 314 C 646 304, 606 290, 574 272 C 581 268, 588 264, 596 262 Z" fill={card} />
+        <path d="M600 186 C 618 178, 634 172, 646 168 C 628 190, 616 208, 610 226 C 604 212, 601 199, 600 186 Z" />
+        <path d="M622 278 C 644 290, 662 302, 674 312 C 650 304, 628 294, 610 284 C 614 281, 618 279, 622 278 Z" />
+
+        {/* dorsal fin — split-U */}
+        <path d="M296 126 C 316 88, 348 58, 390 36 C 374 74, 366 108, 368 138 C 342 129, 318 125, 296 126 Z" />
+        <path d="M320 116 C 338 88, 358 68, 378 54 C 368 82, 362 106, 361 126 C 346 121, 332 118, 320 116 Z" fill={card} />
+        <path d="M334 112 C 348 92, 361 78, 373 68 C 366 90, 361 106, 359 122 C 350 118, 342 114, 334 112 Z" />
+
+        {/* pectoral fin — split-U under the belly */}
+        <path d="M298 322 C 336 326, 368 344, 392 372 C 352 368, 318 358, 292 344 Z" />
+        <path d="M312 332 C 340 338, 362 350, 378 364 C 350 358, 326 350, 306 340 Z" fill={card} />
+
+        {/* ---------- negative-space relief ---------- */}
+        {/* belly sweep — tapered crescent */}
+        <path d="M76 300 C 130 322, 216 330, 302 318 C 226 334, 132 332, 66 314 C 68 308, 72 303, 76 300 Z" fill={card} />
+        {/* jaw / mouth — swelling to diminishing */}
+        <path d="M44 296 C 96 300, 168 302, 226 296 C 168 316, 92 318, 44 308 Z" fill={card} />
+        {/* forehead relief */}
+        <path d="M96 214 C 130 184, 176 166, 224 160 C 180 182, 142 206, 116 234 C 104 228, 98 221, 96 214 Z" fill={card} />
+
+        {/* eye — socket ovoid, eyelid line, pupil */}
+        <path d="M120 208 C 168 208, 194 224, 194 248 C 194 274, 164 290, 118 290 C 78 290, 56 272, 56 248 C 56 224, 82 208, 120 208 Z" fill={card} />
+        <path d="M120 220 C 156 220, 176 232, 176 249 C 176 268, 152 278, 118 278 C 88 278, 70 266, 70 249 C 70 232, 92 220, 120 220 Z" />
+        <path d="M120 231 C 145 231, 160 239, 160 249 C 160 261, 143 268, 119 268 C 98 268, 84 260, 84 249 C 84 239, 100 231, 120 231 Z" fill={card} />
+        <ellipse cx="120" cy="249" rx="15" ry="13" />
+        <ellipse cx="120" cy="249" rx="6" ry="5" fill={card} />
+
+        {/* gill plate — tapered formline arc */}
+        <path d="M232 156 C 214 206, 214 262, 234 314 C 246 312, 254 310, 262 308 C 244 260, 244 208, 258 160 C 248 157, 240 156, 232 156 Z" fill={card} />
+
+        {/* scale rows — nested split-U forms, swelling then diminishing */}
+        <path d="M284 150 C 260 200, 258 258, 282 306 C 290 304, 298 301, 306 298 C 286 252, 288 200, 306 154 C 299 152, 292 151, 284 150 Z" fill={card} />
+        <path d="M326 154 C 304 204, 302 258, 324 302 C 334 299, 344 296, 352 292 C 332 250, 334 202, 352 158 C 344 156, 335 155, 326 154 Z" fill={card} />
+        <path d="M298 174 C 284 212, 283 252, 296 288 C 299 287, 302 286, 305 285 C 293 250, 294 212, 306 178 Z" />
+        <path d="M342 178 C 328 214, 327 252, 340 286 C 343 285, 346 284, 349 283 C 337 250, 338 214, 350 182 Z" />
+
+        {/* ---------- secondary: cedar-red inner forms ---------- */}
+        {/* red joint field — a formline box, rounded on every corner, inset in the ink */}
+        <path d="M388 168 C 442 168, 468 190, 468 224 C 468 260, 440 282, 388 282 C 338 282, 312 260, 312 224 C 312 190, 340 168, 388 168 Z" fill={red} />
+        {/* white ovoid inside the red field — thick above, thin below */}
+        <path d="M390 188 C 438 188, 460 202, 460 228 C 460 254, 436 268, 390 268 C 346 268, 322 254, 322 228 C 322 202, 346 188, 390 188 Z" fill={card} />
+        {/* red inner ovoid, closing the nest */}
+        <path d="M388 204 C 424 204, 442 213, 442 229 C 442 247, 422 255, 388 255 C 356 255, 338 247, 338 229 C 338 213, 356 204, 388 204 Z" fill={red} />
+        <path d="M386 216 C 410 216, 422 221, 422 230 C 422 241, 408 245, 386 245 C 366 245, 354 241, 354 230 C 354 221, 366 216, 386 216 Z" fill={card} />
+        <path d="M384 224 C 398 224, 406 226, 406 231 C 406 237, 397 239, 384 239 C 372 239, 364 237, 364 231 C 364 226, 372 224, 384 224 Z" fill={red} />
+
+        {/* small red split-U at the peduncle, tucked inside the ink */}
+        <path d="M486 214 C 498 224, 505 238, 506 254 C 500 255, 495 257, 490 258 C 488 244, 484 232, 477 221 Z" fill={red} />
+
+        {/* hairline relief — the diminishing end of every line */}
+        <g fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" opacity="0.85">
+          <path d="M60 306 C 120 316, 200 314, 258 302" />
+          <path d="M104 226 C 140 200, 182 184, 220 174" />
+          <path d="M636 176 C 626 196, 618 216, 614 234" />
+          <path d="M622 266 C 644 280, 662 292, 676 302" />
+          <path d="M344 74 C 354 92, 358 110, 358 126" />
+        </g>
+      </g>
+    </svg>
+  );
+};
 
 /** Small corner ovoid-and-U-form flourish. */
 export const FormlineCorner = ({ className = "" }: { className?: string }) => (
