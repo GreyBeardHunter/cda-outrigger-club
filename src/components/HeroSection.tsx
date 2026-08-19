@@ -12,20 +12,21 @@ const HeroSection = () => {
 
       <div className="relative z-10 container text-center px-4 py-32">
         <p className="font-body font-medium text-sm md:text-base tracking-[0.25em] uppercase text-primary-foreground/70 mb-4 animate-fade-slide-up">
-          Coeur d'Alene Outrigger Canoe Club
+          Guided OC6 Outrigger Tours · Lake Coeur d'Alene
         </p>
         <h1 className="font-heading font-extrabold text-4xl sm:text-5xl md:text-7xl text-primary-foreground leading-tight text-balance mb-6 animate-fade-slide-up" style={{ animationDelay: "0.1s" }}>
           <span className="text-accent">Aloha</span> & Welcome
         </h1>
         <p className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-slide-up" style={{ animationDelay: "0.2s" }}>
-          Join Idaho's premier outrigger canoe club on the stunning waters of Lake Coeur d'Alene. No experience needed — just a love for the water.
+          Six-person Hawaiian outrigger canoe experiences on Lake Coeur d'Alene — brunch, lunch, or sunset drinks and
+          apps on the water, plus quick 30-minute paddle tours. Every trip starts with paddling basics and water safety.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-slide-up" style={{ animationDelay: "0.3s" }}>
           <Button variant="hero" size="lg" asChild>
-            <a href="#join">Paddle With Us</a>
+            <a href="#book">Book an Experience</a>
           </Button>
           <Button variant="hero-outline" size="lg" asChild>
-            <a href="#about">Learn More</a>
+            <a href="#experiences">View Tours</a>
           </Button>
         </div>
       </div>

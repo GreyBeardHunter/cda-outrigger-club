@@ -13,18 +13,18 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 items-start mb-8">
           <div>
             <p className="font-heading font-bold text-lg text-primary-foreground mb-1">CDA Outrigger</p>
-            <p className="font-body text-sm text-primary-foreground/60 mb-3">Coeur d'Alene Outrigger Canoe Club</p>
+            <p className="font-body text-sm text-primary-foreground/60 mb-3">Guided outrigger canoe experiences on Lake Coeur d'Alene</p>
             <div className="inline-flex items-center gap-1.5 text-xs text-primary-foreground/50 font-body">
-              <Heart className="w-3 h-3" /> 501(c)(3) Non-Profit
+              <Heart className="w-3 h-3" /> Locally owned & operated
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
             <p className="font-heading font-semibold text-sm text-primary-foreground/80 mb-1">Quick Links</p>
+            <a href="#experiences" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Experiences</a>
+            <a href="#how-it-works" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">How It Works</a>
             <a href="#about" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">About</a>
-            <a href="#schedule" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Schedule</a>
-            <a href="#events" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Events</a>
-            <a href="/sponsorship" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Sponsorship</a>
+            <a href="#book" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Book Now</a>
             <a href="#contact" className="font-body text-sm text-primary-foreground/60 hover:text-accent transition-colors">Contact</a>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 pt-6">
           <p className="font-body text-xs text-primary-foreground/40 text-center">
-            © {new Date().getFullYear()} CDA Outrigger Canoe Club. All rights reserved. A 501(c)(3) non-profit organization.
+            © {new Date().getFullYear()} CDA Outrigger. All rights reserved. Guided OC6 outrigger canoe tours in Coeur d'Alene, Idaho.
           </p>
         </div>
       </div>

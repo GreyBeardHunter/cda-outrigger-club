@@ -3,11 +3,10 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
+  { label: "Experiences", href: "#experiences" },
+  { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#about" },
-  { label: "Schedule", href: "#schedule" },
-  { label: "Calendar", href: "/calendar" },
-  { label: "Events", href: "#events" },
-  { label: "Sponsorship", href: "/sponsorship" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -45,7 +44,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button variant="accent" size="sm" asChild>
-            <a href="#schedule">Paddle With Us</a>
+            <a href="#book">Book Now</a>
           </Button>
         </div>
 
@@ -72,7 +71,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="accent" asChild className="mt-2">
-              <a href="#schedule" onClick={() => setMobileOpen(false)}>Paddle With Us</a>
+              <a href="#book" onClick={() => setMobileOpen(false)}>Book Now</a>
             </Button>
           </div>
         </div>
