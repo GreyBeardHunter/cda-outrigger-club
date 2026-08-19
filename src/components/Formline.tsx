@@ -86,10 +86,10 @@ export const FormlineCanoeMark = ({ className = "" }: { className?: string }) =>
       <path d="M280 56 C 294 56, 302 61, 302 68 C 302 76, 292 80, 280 80 C 268 80, 258 76, 258 68 C 258 61, 266 56, 280 56 Z" fill="hsl(var(--card))" />
 
       {/* crew */}
-      <Paddler x={150} />
-      <Paddler x={230} flip />
-      <Paddler x={330} />
-      <Paddler x={410} flip />
+      <Paddler x={145} />
+      <Paddler x={240} />
+      <Paddler x={335} />
+      <Paddler x={430} />
 
       {/* hull — tapered crescent, heavy at center, knife points at the ends */}
       <path d="M28 218 C 130 268, 430 268, 532 214 C 520 244, 470 268, 400 282 C 320 298, 220 296, 150 278 C 84 262, 40 240, 28 218 Z" />
@@ -115,8 +115,9 @@ export const FormlineSalmon = ({ className = "" }: { className?: string }) => (
       {/* negative belly sweep */}
       <path d="M92 214 C 128 262, 216 284, 300 278 C 232 266, 154 246, 92 214 Z" fill="hsl(var(--card))" />
       {/* head negative field + eye ovoid */}
-      <path d="M78 176 C 96 142, 138 122, 186 118 C 150 148, 122 166, 78 176 Z" fill="hsl(var(--card))" />
-      <ellipse cx="128" cy="176" rx="34" ry="22" fill="hsl(var(--card))" />
+      <path d="M110 132 C 146 124, 176 122, 200 124 C 168 140, 140 152, 116 168 C 106 156, 104 143, 110 132 Z" fill="hsl(var(--card))" />
+      <path d="M128 154 C 152 154, 166 164, 166 178 C 166 194, 148 202, 126 202 C 104 202, 90 192, 90 178 C 90 164, 106 154, 128 154 Z" fill="hsl(var(--card))" />
+      <path d="M92 226 C 130 240, 176 248, 216 248 C 172 258, 122 252, 88 238 Z" fill="hsl(var(--card))" />
       <ellipse cx="128" cy="176" rx="16" ry="12" />
       <ellipse cx="128" cy="176" rx="6" ry="5" fill="hsl(var(--card))" />
       {/* gill U-forms */}
