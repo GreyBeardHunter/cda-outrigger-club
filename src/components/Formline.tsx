@@ -61,11 +61,11 @@ const Paddler = ({ x, lean = 10 }: { x: number; lean?: number }) => {
   const red = "hsl(var(--accent))";
   return (
     <g transform={`translate(${x} 0) rotate(${-lean} 0 220)`}>
-      {/* paddle — tapered shaft driving down and forward into the water */}
-      <path d="M4 150 C -12 178, -32 208, -52 236 C -46 241, -41 245, -37 250 C -20 220, -1 190, 16 160 Z" />
-      {/* blade — leaf form, wide where it bites, tapering to the throat */}
-      <path d="M-52 234 C -70 248, -80 268, -80 290 C -60 288, -44 274, -34 252 C -40 246, -46 240, -52 234 Z" />
-      <path d="M-52 250 C -62 260, -68 272, -69 284 C -57 280, -47 270, -41 256 Z" fill={card} />
+      {/* paddle — long tapered shaft driving down and forward past the gunwale */}
+      <path d="M12 146 C -8 184, -32 224, -56 262 C -49 268, -43 274, -38 281 C -16 240, 6 198, 24 156 Z" />
+      {/* blade — leaf form, wide where it bites the water, tapering to the throat */}
+      <path d="M-56 260 C -78 280, -92 306, -92 332 C -66 328, -46 310, -34 282 C -42 274, -49 267, -56 260 Z" />
+      <path d="M-58 282 C -70 296, -78 312, -80 326 C -66 320, -55 308, -47 292 Z" fill={card} />
 
       {/* head — ovoid pitched forward over the catch */}
       <g transform="rotate(-14 0 148)">
@@ -81,7 +81,7 @@ const Paddler = ({ x, lean = 10 }: { x: number; lean?: number }) => {
       <path d="M-8 202 C -12 212, -9 220, -1 223 C 5 221, 7 214, 5 206 C 0 206, -4 205, -8 202 Z" fill={red} />
 
       {/* leading arm — tapered form reaching down the shaft to the catch */}
-      <path d="M-26 176 C -34 192, -42 206, -52 218 C -46 223, -41 227, -37 232 C -28 218, -20 202, -14 186 Z" />
+      <path d="M-26 176 C -36 196, -46 214, -58 232 C -50 238, -44 244, -39 250 C -28 230, -19 208, -12 188 Z" />
       {/* top hand — swelling to diminishing over the grip */}
       <path d="M8 158 C 16 162, 20 170, 18 180 C 10 178, 4 172, 2 164 Z" />
     </g>
