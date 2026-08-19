@@ -1,62 +1,48 @@
-import canoeBeach from "@/assets/canoe-beach.jpg";
 import crewLaunch from "@/assets/crew-launch.jpg";
-import { Heart, Target, Eye, Compass, Users, Waves, TreePine, GraduationCap, Trophy, HandHeart } from "lucide-react";
+import { Heart, Users, Compass, Waves, Anchor, Camera } from "lucide-react";
 
-const coreValues = [
+const values = [
   {
     icon: Heart,
     title: "Aloha Spirit",
-    description: "More than a word — it's how we interact. With kindness, humility, and mutual respect in everything we do.",
+    description: "Warm hospitality on and off the water. You arrive as a guest and leave as ʻohana.",
   },
   {
     icon: Users,
-    title: "ʻOhana (Community)",
-    description: "Every member is welcomed, respected, and connected. We show up for each other, our community, and the water.",
+    title: "Everyone Paddles",
+    description: "Six seats, one crew. First-timers, kids, and grandparents all find their rhythm together.",
   },
   {
     icon: Compass,
-    title: "Kuleana (Responsibility)",
-    description: "Stewardship through lake clean-ups, conservation efforts, and deep respect for the natural environment.",
+    title: "Kuleana",
+    description: "We steward the lake we work on — leave-no-trace stops and clean, quiet, human-powered boats.",
   },
 ];
 
-const clubPillars = [
+const highlights = [
   {
     icon: Waves,
-    title: "Cultural Foundation",
-    description: "Authentic Hawaiian paddling culture is central to our identity. We learn, practice, and perpetuate traditional protocols by bringing in experienced cultural practitioners and building relationships with partner clubs.",
+    title: "Authentic Waʻa",
+    description:
+      "We paddle traditional OC6 outrigger canoes — the same craft used across Hawaiʻi and the Pacific, rigged and cared for the traditional way.",
     bg: "bg-lake-light",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
   },
   {
-    icon: GraduationCap,
-    title: "Education First",
-    description: "A cultural and educational experience supported by strong community, welcoming all levels with a natural path toward competitive paddling.",
-    bg: "bg-pine-light",
-    iconBg: "bg-secondary/10",
-    iconColor: "text-secondary",
-  },
-  {
-    icon: TreePine,
-    title: "Community Impact",
-    description: "A family-friendly hub, cultural bridge, youth development resource, and fitness outlet serving the greater Coeur d'Alene community.",
+    icon: Anchor,
+    title: "Cove Dining",
+    description:
+      "Our Aloha Experiences pause in a sheltered cove where your guide serves brunch, lunch, or pupus and drinks right from the canoe.",
     bg: "bg-koa-light",
     iconBg: "bg-accent/10",
     iconColor: "text-accent",
   },
   {
-    icon: Trophy,
-    title: "Long-Term Vision",
-    description: "Growing membership, strong community integration, youth programs, hosted events, and participation in regional races within five years.",
-    bg: "bg-lake-light",
-    iconBg: "bg-primary/10",
-    iconColor: "text-primary",
-  },
-  {
-    icon: HandHeart,
-    title: "Leadership & Stewardship",
-    description: "Advisory guidance, cultural connection, and paddling development — growth rooted in respect, humility, and cultural integrity, with experienced voices guiding the way.",
+    icon: Camera,
+    title: "Photos Included",
+    description:
+      "Your guide captures the moments you can't — every guest gets a gallery of shots from the water within 48 hours, free.",
     bg: "bg-pine-light",
     iconBg: "bg-secondary/10",
     iconColor: "text-secondary",
@@ -67,13 +53,12 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 md:py-28 bg-background">
       <div className="container px-4">
-        {/* Who We Are */}
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center mb-20 md:mb-28">
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={crewLaunch}
-                alt="CDA Outrigger crew launching canoe on Lake Coeur d'Alene"
+                alt="Guests launching a six-person outrigger canoe on Lake Coeur d'Alene"
                 className="w-full h-[400px] md:h-[500px] object-cover"
                 loading="lazy"
               />
@@ -87,22 +72,24 @@ const AboutSection = () => {
               Who We Are
             </p>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
-              Paddling Together on <span className="text-primary">Lake Coeur d'Alene</span>
+              Hawaiian Paddling on <span className="text-primary">Lake Coeur d'Alene</span>
             </h2>
             <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
-              CDA Outrigger is Coeur d'Alene's outrigger canoe club. We paddle OC-6 (Outrigger Canoe 6-person) on Lake Coeur d'Alene and coordinate paddling opportunities throughout the Pacific Northwest and beyond.
+              CDA Outrigger is a locally owned tour company sharing the Hawaiian waʻa tradition in North Idaho. We run
+              guided OC6 outrigger canoe experiences on Lake Coeur d'Alene — and, by request, on the lakes and rivers
+              beyond it.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              We are a registered 501(c)(3) non-profit organization dedicated to promoting the sport of outrigger canoeing, building community, and connecting people with the water. Whether you're a seasoned ocean paddler or have never touched a paddle, you belong here.
+              Our guides are certified, lake-savvy, and genuinely happy to be out there. You bring your crew; we bring
+              the canoe, the coaching, the safety gear, and the food and drinks that turn a paddle into an occasion.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pine-light">
               <Heart className="w-4 h-4 text-secondary" />
-              <span className="font-body text-sm font-medium text-secondary">501(c)(3) Non-Profit Organization</span>
+              <span className="font-body text-sm font-medium text-secondary">Locally owned · Guided & insured</span>
             </div>
           </div>
         </div>
 
-        {/* Core Values */}
         <div className="mb-20 md:mb-28">
           <div className="text-center mb-12">
             <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
@@ -113,7 +100,7 @@ const AboutSection = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {coreValues.map((value) => (
+            {values.map((value) => (
               <div key={value.title} className="text-center px-4">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
                   <value.icon className="w-8 h-8 text-primary" />
@@ -125,63 +112,16 @@ const AboutSection = () => {
           </div>
         </div>
 
-        {/* Mission & Vision */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20 md:mb-28">
-          <div className="bg-lake-light rounded-2xl p-8 md:p-10">
-            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-              <Target className="w-7 h-7 text-primary" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Mission</h3>
-            <p className="font-body text-muted-foreground leading-relaxed">
-              The CDA Outrigger Canoe Club builds community, wellness, and connection to the water through the shared tradition of outrigger canoe paddling. Inspired by the Hawaiian waʻa and guided by the values of aloha, ʻohana, and kuleana, we welcome paddlers of all backgrounds to learn, paddle, and grow together while stewarding the waters of Lake Coeur d'Alene.
-            </p>
-          </div>
-
-          <div className="bg-koa-light rounded-2xl p-8 md:p-10">
-            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-              <Eye className="w-7 h-7 text-accent" />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Vision</h3>
-            <p className="font-body text-muted-foreground leading-relaxed">
-              Our vision is to cultivate a thriving waʻa community in North Idaho where outrigger paddling becomes a source of connection, cultural appreciation, and outdoor wellness — establishing Lake Coeur d'Alene as a welcoming home for the spirit of the canoe.
-            </p>
-          </div>
-        </div>
-
-        {/* Club Identity Pillars */}
-        <div className="mb-20 md:mb-28">
-          <div className="text-center mb-12">
-            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-              Club Identity
-            </p>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground leading-tight">
-              Culture, Community & <span className="text-primary">Growth</span>
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {clubPillars.map((pillar) => (
-              <div key={pillar.title} className={`${pillar.bg} rounded-2xl p-8`}>
-                <div className={`w-12 h-12 rounded-xl ${pillar.iconBg} flex items-center justify-center mb-5`}>
-                  <pillar.icon className={`w-6 h-6 ${pillar.iconColor}`} />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-foreground mb-3">{pillar.title}</h3>
-                <p className="font-body text-muted-foreground leading-relaxed text-sm">{pillar.description}</p>
+        <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          {highlights.map((item) => (
+            <div key={item.title} className={`${item.bg} rounded-2xl p-8`}>
+              <div className={`w-12 h-12 rounded-xl ${item.iconBg} flex items-center justify-center mb-5`}>
+                <item.icon className={`w-6 h-6 ${item.iconColor}`} />
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Photo strip */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          <div className="rounded-xl overflow-hidden shadow-card">
-            <img src={canoeBeach} alt="Outrigger canoe with orange ama on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-card">
-            <img src={crewLaunch} alt="Crew preparing the canoe at the shore" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-card hidden md:block">
-            <img src={canoeBeach} alt="Canoe and equipment on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700 object-bottom" loading="lazy" />
-          </div>
+              <h3 className="font-heading font-bold text-lg text-foreground mb-3">{item.title}</h3>
+              <p className="font-body text-muted-foreground leading-relaxed text-sm">{item.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
