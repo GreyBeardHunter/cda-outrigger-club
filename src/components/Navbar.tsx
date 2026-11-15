@@ -3,10 +3,11 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Experiences", href: "#experiences" },
-  { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Schedule", href: "#schedule" },
+  { label: "Calendar", href: "/calendar" },
+  { label: "Events", href: "#events" },
+  { label: "Sponsorship", href: "/sponsorship" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,11 +24,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-card/95 backdrop-blur-md border-b-2 border-foreground" : "bg-transparent"
+        scrolled ? "bg-card/95 backdrop-blur-md shadow-card" : "bg-transparent"
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-heading font-bold text-xl md:text-2xl tracking-tight text-foreground">
+        <a href="#" className={`font-heading font-bold text-xl md:text-2xl tracking-tight transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
           CDA Outrigger
         </a>
 
@@ -36,19 +37,21 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="font-body font-medium text-sm tracking-wide transition-colors duration-300 hover:text-accent text-foreground"
+              className={`font-body font-medium text-sm tracking-wide transition-colors duration-300 hover:text-accent ${
+                scrolled ? "text-foreground" : "text-primary-foreground/90"
+              }`}
             >
               {link.label}
             </a>
           ))}
           <Button variant="accent" size="sm" asChild>
-            <a href="#book">Book Now</a>
+            <a href="#schedule">Paddle With Us</a>
           </Button>
         </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={"md:hidden p-2 transition-colors text-foreground"}
+          className={`md:hidden p-2 transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,7 +72,7 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="accent" asChild className="mt-2">
-              <a href="#book" onClick={() => setMobileOpen(false)}>Book Now</a>
+              <a href="#schedule" onClick={() => setMobileOpen(false)}>Paddle With Us</a>
             </Button>
           </div>
         </div>
