@@ -28,8 +28,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#" className={`font-heading font-bold text-xl md:text-2xl tracking-tight transition-colors duration-300 ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
-          CDA Outrigger
+        <a href="#" className="flex items-center">
+          <img
+            src="https://i.postimg.cc/tJNy0KC5/CDA-Outrigger-Canoe-Club-transparent-(1).png"
+            alt="CDA Outrigger"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </a>
 
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
@@ -72,7 +76,9 @@ const Navbar = () => {
               </a>
             ))}
             <Button variant="accent" asChild className="mt-2">
-              <a href="#schedule" onClick={() => setMobileOpen(false)}>Paddle With Us</a>
+              <a href="#schedule" onClick={() => setMobileOpen(false)}>
+                Paddle With Us
+              </a>
             </Button>
           </div>
         </div>
