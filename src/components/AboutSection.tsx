@@ -6,17 +6,25 @@ const coreValues = [
   {
     icon: Heart,
     title: "Aloha Spirit",
-    description: "More than a word — it's how we interact. With kindness, humility, and mutual respect in everything we do.",
+    description:
+      "More than a word — it's how we interact. With kindness, humility, and mutual respect in everything we do.",
   },
   {
     icon: Users,
     title: "ʻOhana (Community)",
-    description: "Every member is welcomed, respected, and connected. We show up for each other, our community, and the water.",
+    description:
+      "Every member is welcomed, respected, and connected. We show up for each other, our community, and the water.",
   },
   {
     icon: Compass,
     title: "Kuleana (Responsibility)",
-    description: "Stewardship through lake clean-ups, conservation efforts, and deep respect for the natural environment.",
+    description:
+      "Stewardship through lake clean-ups, conservation efforts, and deep respect for the natural environment.",
+  },
+  {
+    icon: Compass,
+    title: "Imua (to move forward)",
+    description: "In the canoe, we move as one — always progressing, always advancing.",
   },
 ];
 
@@ -24,7 +32,8 @@ const clubPillars = [
   {
     icon: Waves,
     title: "Cultural Foundation",
-    description: "Authentic Hawaiian paddling culture is central to our identity. We learn, practice, and perpetuate traditional protocols by bringing in experienced cultural practitioners and building relationships with partner clubs.",
+    description:
+      "Authentic Hawaiian paddling culture is central to our identity. We learn, practice, and perpetuate traditional protocols by bringing in experienced cultural practitioners and building relationships with partner clubs.",
     bg: "bg-lake-light",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
@@ -32,7 +41,8 @@ const clubPillars = [
   {
     icon: GraduationCap,
     title: "Education First",
-    description: "A cultural and educational experience supported by strong community, welcoming all levels with a natural path toward competitive paddling.",
+    description:
+      "A cultural and educational experience supported by strong community, welcoming all levels with a natural path toward competitive paddling.",
     bg: "bg-pine-light",
     iconBg: "bg-secondary/10",
     iconColor: "text-secondary",
@@ -40,7 +50,8 @@ const clubPillars = [
   {
     icon: TreePine,
     title: "Community Impact",
-    description: "A family-friendly hub, cultural bridge, youth development resource, and fitness outlet serving the greater Coeur d'Alene community.",
+    description:
+      "A family-friendly hub, cultural bridge, youth development resource, and fitness outlet serving the greater Coeur d'Alene community.",
     bg: "bg-koa-light",
     iconBg: "bg-accent/10",
     iconColor: "text-accent",
@@ -48,7 +59,8 @@ const clubPillars = [
   {
     icon: Trophy,
     title: "Long-Term Vision",
-    description: "Growing membership, strong community integration, youth programs, hosted events, and participation in regional races within five years.",
+    description:
+      "Growing membership, strong community integration, youth programs, hosted events, and participation in regional races within five years.",
     bg: "bg-lake-light",
     iconBg: "bg-primary/10",
     iconColor: "text-primary",
@@ -56,7 +68,8 @@ const clubPillars = [
   {
     icon: HandHeart,
     title: "Leadership & Stewardship",
-    description: "Advisory guidance, cultural connection, and paddling development — growth rooted in respect, humility, and cultural integrity, with experienced voices guiding the way.",
+    description:
+      "Advisory guidance, cultural connection, and paddling development — growth rooted in respect, humility, and cultural integrity, with experienced voices guiding the way.",
     bg: "bg-pine-light",
     iconBg: "bg-secondary/10",
     iconColor: "text-secondary",
@@ -83,17 +96,18 @@ const AboutSection = () => {
           </div>
 
           <div>
-            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-              Who We Are
-            </p>
+            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">Who We Are</p>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-6 leading-tight">
               Paddling Together on <span className="text-primary">Lake Coeur d'Alene</span>
             </h2>
             <p className="font-body text-muted-foreground text-lg leading-relaxed mb-6">
-              CDA Outrigger is Coeur d'Alene's outrigger canoe club. We paddle OC-6 (Outrigger Canoe 6-person) on Lake Coeur d'Alene and coordinate paddling opportunities throughout the Pacific Northwest and beyond.
+              CDA Outrigger is Coeur d'Alene's outrigger canoe club. We paddle OC-6 (Outrigger Canoe 6-person) on Lake
+              Coeur d'Alene and coordinate paddling opportunities throughout the Pacific Northwest and beyond.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed mb-6">
-              We are a registered 501(c)(3) non-profit organization dedicated to promoting the sport of outrigger canoeing, building community, and connecting people with the water. Whether you're a seasoned ocean paddler or have never touched a paddle, you belong here.
+              We are a registered 501(c)(3) non-profit organization dedicated to promoting the sport of outrigger
+              canoeing, building community, and connecting people with the water. Whether you're a seasoned ocean
+              paddler or have never touched a paddle, you belong here.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-pine-light">
               <Heart className="w-4 h-4 text-secondary" />
@@ -105,9 +119,7 @@ const AboutSection = () => {
         {/* Core Values */}
         <div className="mb-20 md:mb-28">
           <div className="text-center mb-12">
-            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-              Our Values
-            </p>
+            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">Our Values</p>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground leading-tight">
               Grounded in <span className="text-primary">Aloha</span>
             </h2>
@@ -133,7 +145,10 @@ const AboutSection = () => {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Mission</h3>
             <p className="font-body text-muted-foreground leading-relaxed">
-              The CDA Outrigger Canoe Club builds community, wellness, and connection to the water through the shared tradition of outrigger canoe paddling. Inspired by the Hawaiian waʻa and guided by the values of aloha, ʻohana, and kuleana, we welcome paddlers of all backgrounds to learn, paddle, and grow together while stewarding the waters of Lake Coeur d'Alene.
+              The CDA Outrigger Canoe Club builds community, wellness, and connection to the water through the shared
+              tradition of outrigger canoe paddling. Inspired by the Hawaiian waʻa and guided by the values of aloha,
+              ʻohana, and kuleana, we welcome paddlers of all backgrounds to learn, paddle, and grow together while
+              stewarding the waters of Lake Coeur d'Alene.
             </p>
           </div>
 
@@ -143,7 +158,9 @@ const AboutSection = () => {
             </div>
             <h3 className="font-heading font-bold text-xl text-foreground mb-4">Our Vision</h3>
             <p className="font-body text-muted-foreground leading-relaxed">
-              Our vision is to cultivate a thriving waʻa community in North Idaho where outrigger paddling becomes a source of connection, cultural appreciation, and outdoor wellness — establishing Lake Coeur d'Alene as a welcoming home for the spirit of the canoe.
+              Our vision is to cultivate a thriving waʻa community in North Idaho where outrigger paddling becomes a
+              source of connection, cultural appreciation, and outdoor wellness — establishing Lake Coeur d'Alene as a
+              welcoming home for the spirit of the canoe.
             </p>
           </div>
         </div>
@@ -151,9 +168,7 @@ const AboutSection = () => {
         {/* Club Identity Pillars */}
         <div className="mb-20 md:mb-28">
           <div className="text-center mb-12">
-            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
-              Club Identity
-            </p>
+            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">Club Identity</p>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground leading-tight">
               Culture, Community & <span className="text-primary">Growth</span>
             </h2>
@@ -174,13 +189,28 @@ const AboutSection = () => {
         {/* Photo strip */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="rounded-xl overflow-hidden shadow-card">
-            <img src={canoeBeach} alt="Outrigger canoe with orange ama on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <img
+              src={canoeBeach}
+              alt="Outrigger canoe with orange ama on the beach"
+              className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
           </div>
           <div className="rounded-xl overflow-hidden shadow-card">
-            <img src={crewLaunch} alt="Crew preparing the canoe at the shore" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <img
+              src={crewLaunch}
+              alt="Crew preparing the canoe at the shore"
+              className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
           </div>
           <div className="rounded-xl overflow-hidden shadow-card hidden md:block">
-            <img src={canoeBeach} alt="Canoe and equipment on the beach" className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700 object-bottom" loading="lazy" />
+            <img
+              src={canoeBeach}
+              alt="Canoe and equipment on the beach"
+              className="w-full h-48 md:h-64 object-cover hover:scale-105 transition-transform duration-700 object-bottom"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
