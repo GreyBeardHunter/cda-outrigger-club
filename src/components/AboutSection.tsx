@@ -22,7 +22,7 @@ const coreValues = [
       "Stewardship through lake clean-ups, conservation efforts, and deep respect for the natural environment.",
   },
   {
-    icon: Compass,
+    icon: FastForward,
     title: "Imua (to move forward)",
     description: "In the canoe, we move as one — always progressing, always advancing.",
   },
