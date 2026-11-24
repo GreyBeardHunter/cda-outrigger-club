@@ -32,7 +32,9 @@ const Navbar = () => {
           <img
             src="https://i.postimg.cc/tJNy0KC5/CDA-Outrigger-Canoe-Club-transparent-(1).png"
             alt="CDA Outrigger"
-            className="h-10 md:h-12 w-auto object-contain"
+            className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${
+              scrolled ? "brightness-0" : ""
+            }`}
           />
         </a>
 
