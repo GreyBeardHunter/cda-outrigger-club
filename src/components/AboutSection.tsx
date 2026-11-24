@@ -1,6 +1,18 @@
 import canoeBeach from "@/assets/canoe-beach.jpg";
 import crewLaunch from "@/assets/crew-launch.jpg";
-import { Heart, Target, Eye, Compass, Users, Waves, TreePine, GraduationCap, Trophy, HandHeart } from "lucide-react";
+import {
+  Heart,
+  Target,
+  Eye,
+  Compass,
+  Users,
+  Waves,
+  TreePine,
+  GraduationCap,
+  Trophy,
+  HandHeart,
+  FastForward,
+} from "lucide-react";
 
 const coreValues = [
   {
