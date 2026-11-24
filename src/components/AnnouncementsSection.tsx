@@ -8,7 +8,6 @@ interface Announcement {
   body: string;
 }
 
-
 const announcements: Announcement[] = [
   {
     type: "info",
@@ -18,7 +17,7 @@ const announcements: Announcement[] = [
   {
     type: "event",
     title: "Fundraising Event at Doma Coffee",
-    body: "Saturday, June 27th at Doma Coffee. More details to come — stay tuned!",
+    body: "TBD at Doma Coffee. More details to come — stay tuned!",
   },
 ];
 
@@ -58,9 +57,7 @@ const AnnouncementsSection = () => {
             <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center">
               <Megaphone className="w-5 h-5 text-accent" />
             </div>
-            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent">
-              This Week
-            </p>
+            <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent">This Week</p>
           </div>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground text-center mb-10">
             Announcements
@@ -76,19 +73,19 @@ const AnnouncementsSection = () => {
                   className={`bg-card rounded-xl p-6 shadow-card hover:shadow-elevated transition-all duration-500 hover:-translate-y-1 border-l-4 ${style.border}`}
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${style.iconWrap}`}>
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${style.iconWrap}`}
+                    >
                       <Icon className="w-5 h-5" />
                     </div>
                     <div className="flex-1">
-                      <span className={`inline-block font-body text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full mb-2 ${style.badge}`}>
+                      <span
+                        className={`inline-block font-body text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 rounded-full mb-2 ${style.badge}`}
+                      >
                         {typeLabels[a.type]}
                       </span>
-                      <h3 className="font-heading font-bold text-lg text-foreground mb-1.5">
-                        {a.title}
-                      </h3>
-                      <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                        {a.body}
-                      </p>
+                      <h3 className="font-heading font-bold text-lg text-foreground mb-1.5">{a.title}</h3>
+                      <p className="font-body text-sm text-muted-foreground leading-relaxed">{a.body}</p>
                     </div>
                   </div>
                 </article>
