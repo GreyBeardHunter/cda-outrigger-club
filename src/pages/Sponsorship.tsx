@@ -210,7 +210,7 @@ const Sponsorship = () => {
               </div>
 
               <div className="bg-card rounded-2xl border border-border shadow-md p-8">
-                <h3 className="font-heading font-bold text-xl text-foreground">Individual Supporter</h3>
+                <h3 className="font-heading font-bold text-xl text-foreground">Imua Supporter</h3>
                 <p className="font-body text-accent font-semibold text-lg mt-1 mb-1">$100+</p>
                 <span className="font-body text-xs bg-muted text-muted-foreground font-semibold px-3 py-1 rounded-full">
                   Annual
