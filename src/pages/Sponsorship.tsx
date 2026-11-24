@@ -143,7 +143,7 @@ const Sponsorship = () => {
             <div className="bg-card rounded-2xl border border-border shadow-md p-8 md:p-10">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                 <div>
-                  <h3 className="font-heading font-bold text-2xl text-foreground">Waʻa Partner</h3>
+                  <h3 className="font-heading font-bold text-2xl text-foreground">Aloha Sponsor</h3>
                   <p className="font-body text-accent font-semibold text-xl mt-1">$5,000</p>
                 </div>
                 <span className="font-body text-sm bg-muted text-muted-foreground font-semibold px-4 py-1.5 rounded-full self-start">
