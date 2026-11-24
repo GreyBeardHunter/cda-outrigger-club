@@ -35,7 +35,7 @@ const coreValues = [
   },
   {
     icon: FastForward,
-    title: "Imua (to move forward)",
+    title: "Imua (Forward)",
     description: "In the canoe, we move as one — always progressing, always advancing.",
   },
 ];
