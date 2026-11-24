@@ -1,8 +1,18 @@
 import { Clock, MapPin, Calendar } from "lucide-react";
 
 const scheduleData = [
-  { day: "Friday", time: "5:00 PM", type: "Open Paddle", location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts" },
-  { day: "Sunday", time: "5:00 PM", type: "Open Paddle", location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts" },
+  {
+    day: "Friday",
+    time: "5:00 PM",
+    type: "Open Paddle",
+    location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts",
+  },
+  {
+    day: "Sunday",
+    time: "3:00 PM",
+    type: "Open Paddle",
+    location: "NIC Beach — Just South of Yap-Keehn-Um Beach Volleyball Courts",
+  },
 ];
 
 const ScheduleSection = () => {
@@ -13,11 +23,10 @@ const ScheduleSection = () => {
           <p className="font-body font-semibold text-sm tracking-[0.2em] uppercase text-accent mb-3">
             Practice Schedule
           </p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">
-            Get on the Water
-          </h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-4">Get on the Water</h2>
           <p className="font-body text-muted-foreground text-lg max-w-xl mx-auto">
-            We paddle spring through fall on Lake Coeur d'Alene. Come early — we love helping newcomers get started!
+            We paddle mid-May through mid-September on Lake Coeur d'Alene. Come early — we love helping newcomers get
+            started!
           </p>
         </div>
 
